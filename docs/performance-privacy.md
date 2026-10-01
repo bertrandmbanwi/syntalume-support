@@ -37,8 +37,8 @@ Syntalume is designed around explicit budgets and local work, not an absolute
 ## Privacy
 
 - No telemetry.
-- No background network calls.
-- No remote server calls for theme usage.
+- Paid licenses are periodically verified with Polar in the background; project data is not sent.
+- Trial use is checked locally. Paid access requires online validation; see [Privacy](https://syntalume.dev/legal/privacy).
 - No secret scanning.
 - No source upload.
 - No passive review or feedback prompts. Support links run only when you choose
@@ -62,16 +62,17 @@ Syntalume is designed around explicit budgets and local work, not an absolute
   On desktop, Apply rewrites only the bounded contributed Studio manifest and
   SVG directory inside the installed extension. Presets and reports stay local
   until you explicitly copy or save them.
-- The shipped free release has no configured licensing endpoint and performs no
-  startup license check. Optional local trial state uses VS Code global state
-  plus a secret-storage marker; optional signed keys are kept in SecretStorage
-  and verified locally. Staged provider-backed licensing code is disabled in
-  this release and is not evidence of an operational paid service. All 0.10.0
-  baseline features remain unlocked regardless of stored trial or license state.
+- License keys use editor secret storage and the provider's activation identifiers.
+  Trial timing uses a durable record and secure-store backup. See the full
+  [Privacy Policy](https://github.com/syntalume/syntalume-support/blob/main/PRIVACY.md).
+- Activation metrics report licensing/notice waits separately from feature
+  startup and retain total elapsed time; waiting for a person to acknowledge a
+  notice is not represented as feature-startup work.
 
-## Web and Virtual Workspaces
+## Supported execution environments
 
-In browser-based VS Code environments, Syntalume keeps themes, file icons,
-product icons, profiles, and the finite Icon Studio fallback available.
-Arbitrary Studio asset generation and desktop ambience are skipped because web
-extensions cannot use Node filesystem or process APIs.
+The paid release supports native VS Code-compatible extension hosts, including
+supported server-based hosts, and JetBrains. Browser-only extension hosts such
+as vscode.dev/github.dev are excluded until shared browser licensing is ready.
+Remote native hosts need persistent writable storage and may consume a separate
+activation. Virtual workspaces still omit features that need local files or tools.

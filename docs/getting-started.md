@@ -2,6 +2,25 @@
 
 # Getting Started
 
+## Trial and subscription
+
+New users and existing Auralis/Syntalume users receive 30 full days starting when
+they acknowledge the in-editor notice. No payment details are required. After
+that, an annual subscription is required: $9 for 1 activation, $12 for 3, or $20
+for 6, plus applicable tax. Checkout charges immediately and renews yearly until
+canceled. It does not add a second trial.
+
+An activation is an editor installation; multiple editors or remote hosts may
+use separate slots. Theme and Companion share one slot within the same JetBrains
+IDE. Activate via **Syntalume: Activate License** in VS Code-compatible editors,
+or **Tools → Syntalume License** in JetBrains. Recover keys, deactivate old
+installations and cancel renewal in the [customer portal](https://polar.sh/syntalume/portal).
+
+Paid licenses require online validation. Browser-only hosts such as
+vscode.dev/github.dev are not supported by this paid release. Read the
+[licensing details](https://syntalume.dev/legal/licensing) and
+[30-day first-purchase refund policy](https://syntalume.dev/legal/refunds).
+
 ## VS Code Marketplace
 
 1. Open VS Code.

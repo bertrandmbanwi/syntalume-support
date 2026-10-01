@@ -29,6 +29,15 @@ For the fastest first run, choose:
 Syntalume: Apply Recommended Experience
 ```
 
+## Subscriptions
+
+New and existing users receive 30 days from acknowledgement of the in-editor notice.
+Annual plans cost $9/$12/$20 USD for 1/3/6 editor-installation activations, plus
+applicable tax. Checkout charges immediately and renews yearly until canceled.
+Paid access requires online validation. Browser-only extension hosts are outside
+this paid release. See [licensing](https://syntalume.dev/legal/licensing),
+[refunds](https://syntalume.dev/legal/refunds) and [privacy](PRIVACY.md).
+
 ## Help Test the Next Release
 
 Syntalume (formerly Auralis) is inviting a small group of current users to test a private preview
@@ -88,7 +97,7 @@ published with npm trusted-publisher provenance.
 
 ## Source Boundary
 
-The Syntalume product source is private during beta. This repository is public so users have a reliable docs, schemas, generated palette data, and support surface. A public palette package and contribution kit make cross-tool ports independently verifiable without exposing proprietary runtime source.
+The Syntalume product source is private. This repository is public so users have a reliable docs, schemas, generated palette data, and support surface. A public palette package and contribution kit make cross-tool ports independently verifiable without exposing proprietary runtime source.
 
 ## Security And Privacy
 
