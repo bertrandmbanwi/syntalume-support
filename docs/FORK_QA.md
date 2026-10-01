@@ -2,21 +2,19 @@
 
 # Browser and editor-fork QA
 
-The scheduled `Browser and Fork QA` workflow exercises the extension in five
-independent paths:
+The scheduled `Browser and Fork QA` workflow exercises the paid extension in four
+independent paths. Browser-only vscode.dev/github.dev hosts are excluded from
+0.11.0; a browser UI backed by a native remote Node host remains supported:
 
-- a real headless VS Code browser workbench;
 - the current VSCodium desktop host with the exact unpacked candidate VSIX;
 - the current code-server workbench, driven through a real Chromium browser,
   with the same VSIX;
 - the exact current public artifact downloaded from Open VSX.
 - the candidate package contract required by Cursor desktop and Ona's VS
-  Code Browser: desktop and browser entries, stable APIs, no Marketplace-only
+  Code Browser with a native remote host: a desktop entry, stable APIs, no Marketplace-only
   dependency, and both workspace and UI extension kinds.
 
-The VS Code browser smoke verifies the recorded real `activate()` path, opens
-Tune, Icon Studio, and Accessibility Lab, then applies and exactly resets a
-theme-scoped Accessibility Lab status axis. VSCodium goes further than an
+VSCodium goes further than an
 install check: the workflow unpacks the built VSIX, asserts that this exact
 directory and version were loaded, and runs the extension-host integration
 suite under Xvfb. That suite covers activation and its performance budget,
@@ -28,7 +26,7 @@ code-server is also a functional test rather than a shell check. The workflow
 installs the candidate into a clean code-server data directory, starts the
 upstream image pinned to the resolved release digest, and drives its real
 workbench with the exact-pinned `playwright-core` version in `package-lock.json`
-and the runner's Chrome. It opens Tune, Icon Studio, and Accessibility Lab from
+and the runner's Chrome. It acknowledges the 30-day editor notice, then opens Tune, Icon Studio, and Accessibility Lab from
 the Command Palette, applies the sky/orange axis through the visible quick pick
 and confirmation dialog, then invokes exact reset. The test reads the same
 code-server User settings file to prove the pre-existing theme color and the
@@ -50,7 +48,7 @@ below and copy
 3. Open **Extensions: Install from VSIX...** from the Command Palette and pick
    `auralis-theme-system-<version>.vsix`. Installing from the Extensions view
    avoids the known ambiguity of CLI installation into non-default profiles.
-4. Run **Syntalume: Open Setup Dashboard**, apply Paper, and switch through the
+4. Acknowledge **Start My 30 Days**. Run **Syntalume: Open Setup Dashboard**, apply Paper, and switch through the
    file and product icon systems.
 5. Open Tune, Icon Studio, and Accessibility Lab. Apply and reset one scoped
    change, then confirm a deliberately unrelated setting is unchanged.
@@ -81,16 +79,16 @@ alone does not prove that the extension runs in a browser host.
 4. Open the setup dashboard, apply Paper, and open Tune, Icon Studio, and
    Accessibility Lab. Apply and exactly reset one supported setting; verify an
    unrelated setting remains unchanged.
-5. On an actual browser extension host, confirm desktop-only features show
-   their limitation. On a remote Node host, record the supported remote behavior
-   instead. Do not count a remote desktop-host run as the separate browser-host gate.
+5. Confirm the extension runs in a remote Node host, acknowledge the 30-day
+   notice before the feature checks, and record the host. A browser-only host
+   is unsupported by this paid release and cannot count as a passing result.
 6. Capture the Extensions details, dashboard, host/version information, and
    reset result. Sanitize private paths and environment details before sharing.
 
 Expected result: the reviewed candidate installs, the host-appropriate features
 work, exact reset preserves unrelated settings, and no extension-host error
 appears. These are manual runtime results, separate from the static package
-contract and automated VS Code browser smoke.
+contract and automated native-host checks.
 
 The procedure follows Ona's [supported editors](https://ona.com/docs/ona/editors/overview)
 and [VS Code Browser instructions](https://ona.com/docs/ona/editors/vscode-browser).
