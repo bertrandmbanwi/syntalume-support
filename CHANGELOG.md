@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 0.11.0 — 2026-10-01
+
+- Introduced annual subscriptions: $9/$12/$20 USD for 1/3/6 activations. New and existing users receive a full 30-day period from acknowledgement of the in-editor notice. No automatic charge occurs on installation.
+- Added periodic Polar validation, activation recovery, background-feature shutdown/restart and default appearance fallback when access ends. Recovery commands remain available.
+- Added licensing directly to the standalone JetBrains Theme, preserving IDE build 223 compatibility. Companion 0.2.0 shares Theme licensing and retains build 243 compatibility.
+- Isolated license records for native remote extension hosts and coordinated concurrent windows.
+- Browser-only hosts such as vscode.dev/github.dev are outside this paid release while shared browser licensing is being resolved.
+- Documented online validation and annual renewal, with a 30-day first-purchase refund policy.
+
 ## 0.10.2 — 2026-09-23
 
 - Updated documentation, support forms, package metadata, and Marketplace media links for the Syntalume GitHub organization.
