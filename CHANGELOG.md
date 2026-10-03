@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.11.1 — 2026-10-03
+
+- Replaced the automatic JetBrains trial dialog with a non-blocking notification. The 30-day period still starts only after explicit acknowledgement; Tools → Syntalume License can reopen the notice.
+- Companion 0.2.1 safely disables paid features and requests a Theme update when installed with a legacy Theme that lacks shared licensing.
+- Added regression tests and verification against Theme 0.10.2 as well as the current release.
+
 ## 0.11.0 — 2026-10-01
 
 - Introduced annual subscriptions: $9/$12/$20 USD for 1/3/6 activations. New and existing users receive a full 30-day period from acknowledgement of the in-editor notice. No automatic charge occurs on installation.
