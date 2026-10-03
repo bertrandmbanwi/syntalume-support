@@ -4,7 +4,7 @@
 
 Public docs and support hub for **Syntalume — Adaptive Themes & Icons** (formerly Auralis), published under the Marketplace publisher ID `auralis-labs`.
 
-> **Syntalume is the new name for Auralis** — same product, same themes, same listing, same update path. Existing installs upgrade in place and keep every setting.
+> **Syntalume is the new name for Auralis** — same product, same themes, same listing, same update path. Existing installs upgrade in place. Current trial, subscription and appearance-recovery behavior is described below.
 
 Syntalume is built for Terraform, Kubernetes/YAML, cloud infrastructure, React, Rust, AI-assisted work, code review, terminals, and long deep-work sessions.
 
@@ -31,10 +31,14 @@ Syntalume: Apply Recommended Experience
 
 ## Subscriptions
 
-New and existing users receive 30 days from acknowledgement of the in-editor notice.
+New and existing users receive 30 days from the first presentation of the in-editor notice.
+Closing the notice does not end that period.
 Annual plans cost $9/$12/$20 USD for 1/3/6 editor-installation activations, plus
 applicable tax. Checkout charges immediately and renews yearly until canceled.
-Paid access requires online validation. Browser-only extension hosts are outside
+Paid access requires online activation and periodic validation after consent.
+Temporary connection/service failures retain previously verified access for up
+to 72 hours, bounded by the known license expiry; confirmed revocation does not.
+Browser-only extension hosts are outside
 this paid release. See [licensing](https://syntalume.dev/legal/licensing),
 [refunds](https://syntalume.dev/legal/refunds) and [privacy](PRIVACY.md).
 
@@ -101,7 +105,7 @@ The Syntalume product source is private. This repository is public so users have
 
 ## Security And Privacy
 
-Syntalume uses a small lazy runtime after startup, has no passive telemetry or background network calls, and never reads project secrets. Optional local features run only after a Syntalume command/profile enables them.
+Syntalume uses a small lazy runtime after startup and has no passive telemetry. Paid licenses are periodically verified with Polar in the background after activation consent; licensing never uploads project contents, paths or settings. Optional local features run only after a Syntalume command/profile enables them.
 
 - [Security Policy](SECURITY.md)
 - [Privacy Notes](PRIVACY.md)

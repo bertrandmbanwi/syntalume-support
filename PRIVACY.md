@@ -17,7 +17,7 @@ SDK, advertising tracker, automatic crash reporter or passive feedback submissio
 
 ## License verification
 
-New and existing users receive 30 days from acknowledgement of the in-editor
+New and existing users receive 30 days from the first presentation of the in-editor
 notice. The trial is local and requires no payment details or network request.
 Paid licenses require activation and periodic online validation with Polar at
 `https://api.polar.sh/v1/customer-portal/license-keys/`.
@@ -25,14 +25,18 @@ Paid licenses require activation and periodic online validation with Polar at
 Activation sends your license key, Syntalume's Polar organization identifier and
 a random installation label. Validation and deactivation also use Polar's
 activation identifier. Polar receives ordinary connection information such as
-an IP address. Validation occurs in the background while a paid key is stored;
-there is no persistent offline entitlement. Failed validation can stop licensed
-features and restore default appearance, without modifying your source files.
+an IP address. Validation occurs in the background while a paid key is stored. A secure local
+record of successful verification permits up to 72 hours of access during
+temporary connection or service failures, never beyond the known license
+expiry. Confirmed expiration or revocation stops licensed features. Appearance
+selections replaced during enforcement are retained for safe restoration when
+access returns; later manual changes take precedence. Source files are not modified.
 
 Keys and activation records use VS Code SecretStorage or the JetBrains password
 store. Protection depends on the editor, operating system and selected backend.
 A local trial record and secure-store backup retain the start, expiry and last
-observed time. Local lock/intent files contain random coordination identifiers,
+observed time. Cached paid verification retains the verified license and
+activation identity, verification time and expiry; it contains no project data. Local lock/intent files contain random coordination identifiers,
 not keys. Remote native VS Code hosts use a durable random installation scope.
 Theme and Companion share one license within the same JetBrains IDE.
 
@@ -43,6 +47,11 @@ Financial records may need to be retained for legal and accounting obligations.
 Syntalume's static website does not collect card details, login codes or keys.
 Local records remain until removed through editor/storage controls. Uninstalling
 is not cancellation; manage renewal and activations in the [customer portal](https://polar.sh/syntalume/portal).
+
+Native remote hosts connected to the same VS Code UI installation share the
+local 30-day period; existing host-specific periods use the earliest known
+dates. Paid activation slots remain separate per installation. This is not a
+universal account-level trial across different machines or editor products.
 
 ## Local data
 

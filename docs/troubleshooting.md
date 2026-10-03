@@ -2,6 +2,29 @@
 
 # Troubleshooting
 
+## License verification is temporarily unavailable
+
+Run **Syntalume: Show License Status** to distinguish a temporary verification
+problem from an expired or revoked license. Check connectivity and the system
+clock. Do not delete local state or repeatedly activate the same key to repair
+a connection problem; an interrupted activation may need portal reconciliation.
+
+A previously verified paid license can keep working for up to 72 hours from
+its last successful check during temporary failures, never beyond the known
+license expiry. Reconnect before that deadline. An unverified key cannot use
+this grace. Confirmed revocation is enforced without it.
+
+Closing the first-run notice does not cancel the 30-day editor period. Storage
+contention or clock problems should be reported as unavailable verification,
+not as proof that the trial ended. Retry after fixing the clock or storage
+problem. Do not reset the system clock to extend access.
+
+If license enforcement replaced Syntalume appearance, access recovery restores
+those saved selections only while the fallback remains unchanged. Any manual
+appearance choice you made afterward takes precedence. Recover your key or
+manage activations in the [customer portal](https://polar.sh/syntalume/portal).
+Never include license keys in a public support issue.
+
 ## I installed Syntalume but do not see the themes
 
 Run:
@@ -28,7 +51,9 @@ back automatically so Explorer reloads the generated manifest. If Apply reports
 that the installation is read-only, reinstall Syntalume in your normal User
 extensions location; no settings are changed by the failed attempt.
 
-On vscode.dev and other web hosts, choose Balanced, Minimal, Outline, or
+Browser-only hosts such as vscode.dev are not supported by this paid release;
+use a native desktop editor for the trial and activation. In older browser
+builds, choose Balanced, Minimal, Outline, or
 Pictorial. Arbitrary slider values and custom folder/root/language maps remain
 read-only preset previews there because browser extensions cannot update their
 packaged contribution files.

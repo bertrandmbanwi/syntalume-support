@@ -26,7 +26,7 @@ code-server is also a functional test rather than a shell check. The workflow
 installs the candidate into a clean code-server data directory, starts the
 upstream image pinned to the resolved release digest, and drives its real
 workbench with the exact-pinned `playwright-core` version in `package-lock.json`
-and the runner's Chrome. It acknowledges the 30-day editor notice, then opens Tune, Icon Studio, and Accessibility Lab from
+and the runner's Chrome. It verifies that the 30-day editor notice does not block startup, then opens Tune, Icon Studio, and Accessibility Lab from
 the Command Palette, applies the sky/orange axis through the visible quick pick
 and confirmation dialog, then invokes exact reset. The test reads the same
 code-server User settings file to prove the pre-existing theme color and the
@@ -48,7 +48,7 @@ below and copy
 3. Open **Extensions: Install from VSIX...** from the Command Palette and pick
    `auralis-theme-system-<version>.vsix`. Installing from the Extensions view
    avoids the known ambiguity of CLI installation into non-default profiles.
-4. Acknowledge **Start My 30 Days**. Run **Syntalume: Open Setup Dashboard**, apply Paper, and switch through the
+4. Confirm the notice starts the full 30-day period and that dismissing it retains access. Run **Syntalume: Open Setup Dashboard**, apply Paper, and switch through the
    file and product icon systems.
 5. Open Tune, Icon Studio, and Accessibility Lab. Apply and reset one scoped
    change, then confirm a deliberately unrelated setting is unchanged.
@@ -57,7 +57,7 @@ below and copy
    error.
 
 Expected result: the dashboard and desktop features work, the browser-safe
-surfaces remain available, reset preserves unrelated settings, and no proposed
+surfaces remain available in the native host, reset preserves unrelated settings, and no proposed
 API warning appears.
 
 ## Ona / VS Code Browser smoke
@@ -79,8 +79,8 @@ alone does not prove that the extension runs in a browser host.
 4. Open the setup dashboard, apply Paper, and open Tune, Icon Studio, and
    Accessibility Lab. Apply and exactly reset one supported setting; verify an
    unrelated setting remains unchanged.
-5. Confirm the extension runs in a remote Node host, acknowledge the 30-day
-   notice before the feature checks, and record the host. A browser-only host
+5. Confirm the extension runs in a remote Node host, confirm the 30-day
+   notice starts the period before the feature checks, and record the host. A browser-only host
    is unsupported by this paid release and cannot count as a passing result.
 6. Capture the Extensions details, dashboard, host/version information, and
    reset result. Sanitize private paths and environment details before sharing.

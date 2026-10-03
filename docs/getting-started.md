@@ -5,7 +5,7 @@
 ## Trial and subscription
 
 New users and existing Auralis/Syntalume users receive 30 full days starting when
-they acknowledge the in-editor notice. No payment details are required. After
+the in-editor notice is first presented. Closing it does not end that period. No payment details are required. After
 that, an annual subscription is required: $9 for 1 activation, $12 for 3, or $20
 for 6, plus applicable tax. Checkout charges immediately and renews yearly until
 canceled. It does not add a second trial.
@@ -16,10 +16,19 @@ IDE. Activate via **Syntalume: Activate License** in VS Code-compatible editors,
 or **Tools → Syntalume License** in JetBrains. Recover keys, deactivate old
 installations and cancel renewal in the [customer portal](https://polar.sh/syntalume/portal).
 
-Paid licenses require online validation. Browser-only hosts such as
+Paid licenses require online activation and periodic validation after consent.
+Temporary connection or service failures retain previously verified access for
+up to 72 hours, never beyond the known license expiry. Confirmed expiration or
+revocation stops licensed features. Appearance replaced during enforcement is
+restored when access returns only if you have not changed it yourself. Browser-only hosts such as
 vscode.dev/github.dev are not supported by this paid release. Read the
 [licensing details](https://syntalume.dev/legal/licensing) and
 [30-day first-purchase refund policy](https://syntalume.dev/legal/refunds).
+
+Native remote hosts connected to the same VS Code UI installation share the
+local 30-day period; existing host-specific periods use the earliest known
+dates. Paid activation slots remain separate per installation. This is not a
+universal account-level trial across different machines or editor products.
 
 ## VS Code Marketplace
 
@@ -53,11 +62,10 @@ The public, approved Syntalume Theme listing for JetBrains IDEs is:
 - https://plugins.jetbrains.com/plugin/32762-auralis-theme
 
 The standalone theme plugin carries all nine palettes, editor schemes,
-Islands-aware surfaces, and Syntalume icon substitutions without bundling
-behavioral runtime features. Syntalume Companion is a separate optional plugin
+Islands-aware surfaces, and Syntalume icon substitutions with its own small licensing runtime. It does not require Companion. Syntalume Companion is a separate optional plugin
 for shared profiles, project identity, Rhythm, and Environment Guard; keeping
 the two products separate means users who want only a theme install only a
-theme. Its shared-profile review can also apply supported comfort, syntax,
+theme. Companion’s shared-profile review can also apply supported comfort, syntax,
 bracket, and density choices through a separately owned editor scheme; every
 change is previewed first, and unsupported Look and Feel fields are identified
 without approximation.
@@ -73,7 +81,7 @@ Reload VS Code after installing a local package.
 
 ## Installation Is Non-Intrusive
 
-Installing Syntalume does not change anything on its own. Your color theme, file icons, and editor settings stay exactly as they were until you choose to adopt the Syntalume experience. To apply it, run:
+Installing Syntalume does not automatically apply a theme or profile. The first-run notice starts your 30-day period; closing it preserves the remaining time. If access later expires, selected Syntalume appearance can fall back to editor defaults, with your selection retained for safe restoration after reactivation. To apply it, run:
 
 ```text
 Syntalume: Apply Recommended Experience
