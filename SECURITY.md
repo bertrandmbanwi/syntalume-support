@@ -45,7 +45,9 @@ Syntalume is designed to keep the default theme path low risk:
   network request required. Closing the notice does not end that period.
 - Temporary provider or connection failures do not mean revocation. Previously
   verified paid access has a bounded 72-hour grace period, never beyond the
-  known license expiry. Confirmed revocation is enforced without that grace.
+  known license expiry. After grace ends, unavailable verification pauses
+  licensed operations without replacing the selected appearance. Confirmed
+  revocation is enforced without that grace.
 - License keys and cached verification records use editor secret storage.
   This does not make downloaded themes copy-proof or prevent deliberate
   tampering with local trial records.

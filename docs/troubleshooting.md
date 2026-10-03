@@ -12,7 +12,9 @@ a connection problem; an interrupted activation may need portal reconciliation.
 A previously verified paid license can keep working for up to 72 hours from
 its last successful check during temporary failures, never beyond the known
 license expiry. Reconnect before that deadline. An unverified key cannot use
-this grace. Confirmed revocation is enforced without it.
+this grace. When grace ends while verification is unavailable, interactive
+and background features pause but selected appearance is retained. Confirmed
+revocation is enforced without it.
 
 Closing the first-run notice does not cancel the 30-day editor period. Storage
 contention or clock problems should be reported as unavailable verification,
@@ -23,7 +25,10 @@ If license enforcement replaced Syntalume appearance, access recovery restores
 those saved selections only while the fallback remains unchanged. Any manual
 appearance choice you made afterward takes precedence. Recover your key or
 manage activations in the [customer portal](https://polar.sh/syntalume/portal).
-Never include license keys in a public support issue.
+Older versions did not save selections replaced during enforcement. Those
+missing selections cannot be reconstructed automatically; select your preferred
+theme and icons once after updating if needed. Never include license keys in a
+public support issue.
 
 ## I installed Syntalume but do not see the themes
 

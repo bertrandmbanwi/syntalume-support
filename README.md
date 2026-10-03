@@ -38,6 +38,8 @@ applicable tax. Checkout charges immediately and renews yearly until canceled.
 Paid access requires online activation and periodic validation after consent.
 Temporary connection/service failures retain previously verified access for up
 to 72 hours, bounded by the known license expiry; confirmed revocation does not.
+After grace ends, unavailable verification pauses licensed operations without
+replacing the selected appearance.
 Browser-only extension hosts are outside
 this paid release. See [licensing](https://syntalume.dev/legal/licensing),
 [refunds](https://syntalume.dev/legal/refunds) and [privacy](PRIVACY.md).

@@ -18,7 +18,9 @@ installations and cancel renewal in the [customer portal](https://polar.sh/synta
 
 Paid licenses require online activation and periodic validation after consent.
 Temporary connection or service failures retain previously verified access for
-up to 72 hours, never beyond the known license expiry. Confirmed expiration or
+up to 72 hours, never beyond the known license expiry. When grace ends while
+verification is unavailable, interactive and background features pause but the
+selected appearance remains. Confirmed expiration or
 revocation stops licensed features. Appearance replaced during enforcement is
 restored when access returns only if you have not changed it yourself. Browser-only hosts such as
 vscode.dev/github.dev are not supported by this paid release. Read the
