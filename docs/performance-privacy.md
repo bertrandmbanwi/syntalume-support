@@ -38,7 +38,11 @@ Syntalume is designed around explicit budgets and local work, not an absolute
 
 - No telemetry.
 - Paid licenses are periodically verified with Polar in the background; project data is not sent.
-- Trial use is checked locally. Paid access requires online validation; see [Privacy](https://syntalume.dev/legal/privacy).
+- Trial use is checked locally. Paid access requires online activation and
+  periodic validation after consent. A previously verified license can continue
+  for up to 72 hours during temporary connection/service failures, bounded by
+  its known expiry. Confirmed revocation does not receive this grace. See
+  [Privacy](https://syntalume.dev/legal/privacy).
 - No secret scanning.
 - No source upload.
 - No passive review or feedback prompts. Support links run only when you choose
@@ -46,7 +50,8 @@ Syntalume is designed around explicit budgets and local work, not an absolute
 - The optional JetBrains Companion reads `.syntalume/profile.json` first, with
   `.auralis/profile.json` as a legacy fallback, only when you inspect or apply it. Accepted appearance values are stored in normal local
   IDE/project component state and a locally derived editor scheme; no project
-  file is edited and nothing is transmitted. Exact reset fingerprints public
+  file is edited and project metadata is not transmitted. Licensing requests are handled separately
+  by the standalone Theme’s licensing service. Exact reset fingerprints public
   scheme settings so later manual edits are preserved.
 - The Setup Dashboard can show two aggregate activity counts: explicit Tune
   applies and shared profile recommendations you chose to apply. They contain
@@ -65,9 +70,8 @@ Syntalume is designed around explicit budgets and local work, not an absolute
 - License keys use editor secret storage and the provider's activation identifiers.
   Trial timing uses a durable record and secure-store backup. See the full
   [Privacy Policy](https://github.com/syntalume/syntalume-support/blob/main/PRIVACY.md).
-- Activation metrics report licensing/notice waits separately from feature
-  startup and retain total elapsed time; waiting for a person to acknowledge a
-  notice is not represented as feature-startup work.
+- Activation metrics separate licensing work from feature startup and retain
+  total elapsed time. The trial notice does not block editor startup.
 
 ## Supported execution environments
 

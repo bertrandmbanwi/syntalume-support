@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 0.11.2 — 2026-10-03
+
+- Preserve the selected appearance during temporary licensing or storage failures. Previously verified paid access continues for up to 72 hours, capped by the confirmed subscription expiry; definitive revocation still stops access.
+- Record fallback selections before enforcing confirmed expiry and restore them after access returns, preserving later user choices. Selections already erased by older releases cannot be reconstructed; reselect a preferred theme once if needed.
+- Start the full 30-day new-user/existing-user period when the notice is presented. Dismissal no longer forfeits access, normal checks are read-only, small clock corrections are tolerated, and separate remote hosts retain the earliest shared period.
+- Preserve JetBrains activation across IDE version upgrades, avoid sleep/wake revalidation flicker, and keep the standalone Theme's existing compatibility range. Companion 0.2.2 uses the shared Theme licensing service.
+- Gate dashboard mutations, retain ownership for Rhythm changes, safely adopt other-window ownership updates, compact continuous reset history, and preserve manual edits when Tune or Calibrate fails.
+- Classify preprod as staging with the default Environment Guard patterns. Correct paid-release security, privacy, platform, Marketplace and website disclosures.
+
 ## 0.11.1 — 2026-10-03
 
 - Replaced the automatic JetBrains trial dialog with a non-blocking notification. The 30-day period still starts only after explicit acknowledgement; Tools → Syntalume License can reopen the notice.

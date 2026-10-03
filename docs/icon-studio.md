@@ -50,6 +50,10 @@ reliably reloads the new manifest without asking you to reload the window.
 
 ## Web and read-only installations
 
+Browser-only extension hosts are not supported by the paid release. The
+capability limits below describe the packaged browser code, not a supported
+trial or paid activation path. Use a native desktop editor for paid features.
+
 vscode.dev, github.dev, and other browser extension hosts cannot write
 extension assets. They use the finite generated fallback: all four named
 appearances across all five families. A safe file/language association can also
